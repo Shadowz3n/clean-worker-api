@@ -5,16 +5,19 @@ import { Middleware } from '@/presentation/protocols/middleware';
 import { HttpResponse } from '@/presentation/protocols/http';
 
 export class AuthMiddleware implements Middleware {
-  constructor (
+  constructor(
     private readonly loadAccountByToken: LoadAccountByToken,
-    private readonly role?: string
+    private readonly role?: string,
   ) {}
 
-  async handle (request: AuthMiddleware.Request): Promise<HttpResponse> {
+  async handle(request: AuthMiddleware.Request): Promise<HttpResponse> {
     try {
       const { accessToken } = request;
       if (accessToken) {
-        const account = await this.loadAccountByToken.load(accessToken, this.role);
+        const account = await this.loadAccountByToken.load(
+          accessToken,
+          this.role,
+        );
         if (account) {
           return ok({ accountId: account.id });
         }
@@ -28,6 +31,6 @@ export class AuthMiddleware implements Middleware {
 
 export namespace AuthMiddleware {
   export type Request = {
-    accessToken?: string
-  }
+    accessToken?: string;
+  };
 }

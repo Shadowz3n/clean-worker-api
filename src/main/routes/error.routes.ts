@@ -1,6 +1,6 @@
-import { NotFoundController } from "@/presentation/controllers/error/not.found.controller";
+import { NotFoundController } from '@/presentation/controllers/error/not.found.controller';
 import { adaptRoute } from '@/main/adapters/itty.adapter';
-import { Router } from "itty-router";
+import { Router } from 'itty-router';
 
 const errorRouter = Router();
 

@@ -12,5 +12,5 @@ export const adaptRoute = (controller: Controller) => {
     return new Response(httpResponse.body, {
       status: httpResponse.statusCode,
     });
-  }
-}
+  };
+};

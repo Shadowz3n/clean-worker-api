@@ -3,7 +3,7 @@ import { Router } from 'itty-router';
 
 export const setupApp = () => {
   const router = Router({
-    routes
+    routes,
   });
   return router;
-}
+};

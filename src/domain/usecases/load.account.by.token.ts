@@ -1,9 +1,12 @@
 export interface LoadAccountByToken {
-  load: (accessToken: string, role?: string) => Promise<LoadAccountByToken.Result>;
+  load: (
+    accessToken: string,
+    role?: string,
+  ) => Promise<LoadAccountByToken.Result>;
 }
 
 export namespace LoadAccountByToken {
   export type Result = {
-    id: string
-  }
+    id: string;
+  };
 }
