@@ -27,6 +27,6 @@
   "scripts": {
     "start": "wrangler dev",
     "deploy": "wrangler publish",
-    "format": "prettier --write  '*.{json,js}' 'src/**/*.{js,ts,gql}'",
+    "format": "prettier --write  '*.{json,js}' 'src/**/*.{js,ts,gql}'"
   }
 }
