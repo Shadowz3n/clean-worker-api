@@ -3,11 +3,11 @@ import { RegisterController } from '@/presentation/controllers/auth/register.con
 import { adaptRoute } from '@/main/adapters/itty.adapter';
 import { Router } from 'itty-router';
 
-const loginRouter = Router({
+const authRouter = Router({
   base: '/v1/auth',
 });
 
-loginRouter.post('/email', adaptRoute(new EmailAuthController()));
-loginRouter.post('/email/register', adaptRoute(new RegisterController()));
+authRouter.post('/email', adaptRoute(new EmailAuthController()));
+authRouter.post('/email/register', adaptRoute(new RegisterController()));
 
-export { loginRouter };
+export { authRouter };

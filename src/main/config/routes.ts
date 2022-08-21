@@ -1,9 +1,11 @@
 import { errorRouter } from '@/main/routes/error.routes';
-import { loginRouter } from '@/main/routes/login.routes';
+import { authRouter } from '@/main/routes/auth.routes';
+import { contactRouter } from '@/main/routes/contact.routes';
 import { swaggerRouter } from '@/main/config/swagger';
 
 export const routes = [
   ...swaggerRouter.routes,
-  ...loginRouter.routes,
+  ...contactRouter.routes,
+  ...authRouter.routes,
   ...errorRouter.routes,
 ];
