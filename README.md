@@ -18,6 +18,10 @@
   - `npm run deploy`
 
 - On your Cloudflare worker service, create these environment vars:
+  - `FAUNADB_API`
+  - `FAUNADB_SECRET`
+  - `JWT_SECRET_KEY`
+  - `MONGODB_CONNECTION`
   - ![image](https://user-images.githubusercontent.com/3290905/185771227-81577d86-bb2e-4713-a6da-74d826b7c275.png)
 
 - Create your FaunaDB account: https://dashboard.fauna.com/accounts/register
