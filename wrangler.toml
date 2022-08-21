@@ -1,8 +1,8 @@
-name = "imps-api-dev"
+name = "imps-api"
 main = "src/server.ts"
 minify = true
 compatibility_date = "2022-08-20"
-route = "dev.api.imps.com.br/*"
+route = "api.imps.com.br/*"
 
 [vars]
 JWT_SECRET_KEY = "secret"
@@ -11,10 +11,8 @@ FAUNADB_SECRET = ""
 
 [env.staging]
 name = "imps-api-staging"
-route = "staging.imps.com.br/*"
+route = "staging.api.imps.com.br/*"
 
-[env.production]
-name = "imps-api"
-routes = [
-  "api.imps.com.br/*"
-]
+[env.develop]
+name = "imps-api-develop"
+route = "develop.api.imps.com.br/*"

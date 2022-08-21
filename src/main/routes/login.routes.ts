@@ -7,7 +7,7 @@ const loginRouter = Router({
   base: '/v1/auth',
 });
 
-loginRouter.get('/email', adaptRoute(new EmailAuthController()));
-loginRouter.get('/email/register', adaptRoute(new RegisterController()));
+loginRouter.post('/email', adaptRoute(new EmailAuthController()));
+loginRouter.post('/email/register', adaptRoute(new RegisterController()));
 
 export { loginRouter };

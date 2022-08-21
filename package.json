@@ -26,8 +26,9 @@
   "private": true,
   "scripts": {
     "start": "wrangler dev",
+    "deploy:develop": "wrangler publish -e develop",
     "deploy:staging": "wrangler publish -e staging",
-    "deploy": "wrangler publish -e production",
+    "deploy": "wrangler publish",
     "format": "prettier --write  '*.{json,js}' 'src/**/*.{js,ts,gql}'"
   }
 }
